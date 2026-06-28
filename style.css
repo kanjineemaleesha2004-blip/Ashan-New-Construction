@@ -602,4 +602,43 @@ img {
         box-sizing: border-box !important;
     }
 }
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px !important;      
+        word-wrap: break-word !important; 
+        overflow-wrap: break-word !important;
+        padding-left: 10px !important;   
+        padding-right: 10px !important;  
+        text-align: center !important;  
+    }
+}
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.feature-box {
+    flex: 1; 
+    min-width: 300px; 
+}
+
+@media (max-width: 600px) {
+    .features-section {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 90% !important; 
+        margin-bottom: 20px;
+    }
+
+    .feature-box img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+    }
+}
 
