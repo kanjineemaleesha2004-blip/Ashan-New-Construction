@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Ashan New Construction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="breadcrumb-nav">
+        <a href="index.html" class="nav-box">Home <span class="nav-arrow">&gt;</span></a>
+        <a href="about.html" class="nav-box">About</a>
+    </nav>
+
+    <main>
+        <section class="excavator-services">
+            <h2 class="section-title">Our Excavators</h2>
+            
+            <div class="excavator-grid">
+                <div class="excavator-card">
+                    <img src="images/excavator1.jpeg" alt="Standard Excavator">
+                    <h3>Standard Excavator</h3>
+                    <p class="price">Rs. 4,500 / Hour</p>
+                    <label>Select Date:</label>
+                    <input type="date" id="date-Standard" class="date-picker">
+                    <button class="book-btn" onclick="checkAvailability('Standard Excavator')">Rent Now</button>
+                </div>
+
+                <div class="excavator-card">
+                    <img src="images/excavator2.jpeg" alt="Medium Excavator">
+                    <h3>Medium Excavator</h3>
+                    <p class="price">Rs. 6,500 / Hour</p>
+                    <label>Select Date:</label>
+                    <input type="date" id="date-Medium" class="date-picker">
+                    <button class="book-btn" onclick="checkAvailability('Medium Excavator')">Rent Now</button>
+                </div>
+
+                <div class="excavator-card">
+                    <img src="images/excavator3.jpg" alt="Heavy Duty Excavator">
+                    <h3>Heavy Duty Excavator</h3>
+                    <p class="price">Rs. 9,000 / Hour</p>
+                    <label>Select Date:</label>
+                    <input type="date" id="date-Heavy" class="date-picker">
+                    <button class="book-btn" onclick="checkAvailability('Heavy Duty Excavator')">Rent Now</button>
+                    <div class="additional-services">
+    <h3>Other Services & Materials</h3>
+    <p>We also provide high-quality materials and machinery for your construction needs:</p>
+    <ul>
+        <li><strong>Machinery:</strong> Tractors, Lorries, Road Rollers.</li>
+        <li><strong>Materials:</strong> Quality Stones, Sand, and Soil.</li>
+    </ul>
+    <p class="price-negotiable"><strong>Prices are negotiable!</strong></p>
+    <p>For custom orders and pricing, please contact us directly:</p>
+    <a href="tel:+94775259391" class="call-btn">Call Now for a orders</a>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const bookings = {
+            "Heavy Duty Excavator": ["2026-07-01"]
+        };
+
+        function checkAvailability(machineName) {
+            let id = 'date-' + machineName.split(' ')[0];
+            let selectedDate = document.getElementById(id).value;
+
+            if (!selectedDate) { alert("Please select a date first!"); return; }
+
+            if (bookings[machineName] && bookings[machineName].includes(selectedDate)) {
+                alert("Sorry, " + machineName + " is booked for " + selectedDate);
+            } else {
+                alert("Success! Redirecting to contact page...");
+                window.location.href = "contact.html?machine=" + machineName + "&date=" + selectedDate;
+            }
+        }
+    </script>
+</body>
+</html>
