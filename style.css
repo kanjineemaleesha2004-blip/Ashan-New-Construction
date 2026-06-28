@@ -590,4 +590,16 @@ nav ul li {
         height: auto !important;
     }
 }
+img {
+    max-width: 100%;    
+    height: auto;       
+    display: block;    
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+}
 
