@@ -570,3 +570,24 @@ nav ul li {
         margin: 10px 0; 
     }
 }
+@media (max-width: 600px) {
+    .breadcrumb-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .nav-box {
+        width: 80% !important;
+        margin-bottom: 10px !important;
+        text-align: center;
+    }
+
+    body {
+        padding: 10px !important;
+    }
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
