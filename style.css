@@ -437,10 +437,10 @@ header {
 }
 /* About Page Styles */
 .date-picker { display: block; width: 90%; margin: 10px auto; padding: 8px; }
-/* Contact පිටුවේ සම්පූර්ණ පසුබිම කළු කිරීම */
+/* Contact*/
 body.contact-page {
     background-color: #000000;
-    color: #ffffff; /* අකුරු සුදු පැහැය */
+    color: #ffffff; 
 }
 /* Contact Page Dark Theme */
 .contact-page {
@@ -485,7 +485,7 @@ body.contact-page {
     text-decoration: underline;
 }
 .additional-services {
-    background-color: #2c3e50; /* තද නිල්/කළු පසුබිම */
+    background-color: #2c3e50; 
     color: white;
     padding: 30px;
     border-radius: 15px;
@@ -507,7 +507,7 @@ body.contact-page {
 
 .price-negotiable {
     font-size: 1.3em;
-    color: #ff6600; /* කැපී පෙනෙන වර්ණයක් */
+    color: #ff6600; 
     margin: 20px 0;
 }
 
@@ -526,4 +526,25 @@ body.contact-page {
 .call-btn:hover {
     background-color: #e65c00;
     transform: scale(1.05);
+}
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Excavator Grid */
+.excavator-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .excavator-card {
+        margin: 10px;
+    }
 }
