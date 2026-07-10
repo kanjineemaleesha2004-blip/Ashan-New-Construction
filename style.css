@@ -175,7 +175,7 @@ header {
     min-width: 300px;
     padding: 40px 20px;
     text-align: center;
-    color: white;
+    color: rgb(225, 245, 46);
     /* Smooth transition for hover effects */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
@@ -299,7 +299,7 @@ header {
 .nav-box {
     padding: 15px 25px;
     background-color: #2c3e50;
-    color: white;
+    color: rgb(204, 255, 76);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -334,7 +334,7 @@ header {
 /* About page background */
 .excavator-services {
     padding: 60px 20px;
-    background-color: #f4f7f6; /* Soft light background color */
+    background-color: #ffff5d; /* Soft light background color */
     text-align: center;
 }
 
@@ -574,7 +574,7 @@ img {
 }
 
 .excavator-card, .service-item {
-    background: #fff;
+    background: #f0e512;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -598,7 +598,7 @@ img {
 }
 
 .excavator-card {
-    background: #fff;
+    background: #cdfc0f;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
