@@ -114,7 +114,7 @@ header {
 
 
 .service-box {
-    background: #f4f4f4;
+    background: #d4ff5e;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -145,7 +145,7 @@ header {
     min-width: 300px;
     padding: 40px 20px;
     text-align: center;
-    color: white;
+    color: rgb(235, 251, 69);
 }
 
 /* Backgrounds */
