@@ -1,9 +1,10 @@
 /* 1. Reset & Body */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f4f4f4; overflow-x: hidden; }
+body { font-family: 'Arial', sans-serif; line-height: 1.6; background-color: #f4f4f4; overflow-x: hidden; }
 
 /* 2. Header & Logo */
 header { background: #b2bcc1; color: #081a55; padding: 20px 0; text-align: center; text-transform: uppercase; font-weight: bold; }
+.header-content { display: flex; justify-content: center; align-items: center; gap: 20px; }
 .logo-img { width: 200px; height: auto; }
 
 /* 3. Navigation */
@@ -11,8 +12,10 @@ header { background: #b2bcc1; color: #081a55; padding: 20px 0; text-align: cente
 .nav-box { 
     padding: 15px 25px; background-color: #2c3e50; color: white; text-decoration: none; 
     border-radius: 5px; font-weight: bold; font-size: 18px; transition: all 0.3s ease; 
+    display: flex; align-items: center; 
 }
-.nav-box:hover { background-color: #ff6600; transform: translateY(-3px); }
+.nav-box:hover { background-color: #ff6600; transform: translateY(-3px); box-shadow: 0 5px 10px rgba(0,0,0,0.2); }
+.nav-arrow { margin-left: 10px; color: #ff6600; }
 
 /* 4. Welcome Section */
 .welcome-section {
@@ -21,45 +24,33 @@ header { background: #b2bcc1; color: #081a55; padding: 20px 0; text-align: cente
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: white; text-align: center; padding: 20px;
 }
+.welcome-section h1 { font-size: 3.5em; margin-bottom: 10px; }
+.subtitle { font-size: 1.5em; color: #ff9933; font-weight: bold; }
+.cta-button { background-color: #ffd321; color: white; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
 
-/* 5. Our Services (Icons section) */
-.our-services-section { background-color: #081a55; padding: 60px 20px; color: white; text-align: center; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto; }
-.service-item { background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; }
-.service-icon { width: 80px; height: 80px; background-color: #ff6600; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px auto; font-size: 2em; color: white; }
+/* 5. Features Section */
+.features-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px 20px; }
+.feature-box { flex: 1; min-width: 300px; padding: 40px 20px; text-align: center; color: white; transition: 0.4s; }
+.dark-bg { background-color: #2c3e50; }
+.highlight-bg { background-color: #f1c40f; color: black; }
+.feature-box:hover { transform: translateY(-15px); box-shadow: 0 20px 30px rgba(0,0,0,0.3); }
 
-/* 6. Excavator/Services Section (Cards with Button) */
-.excavator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 20px; }
-.excavator-card { 
-    background: rgb(137, 192, 239); padding: 25px; border-radius: 20px; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; 
-    transition: 0.3s;
-}
+/* 6. Excavator/Services Section - මුල් පෙනුමමයි */
+.excavator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 40px auto; padding: 20px; }
+.excavator-card { background: rgb(137, 192, 239); padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+.excavator-card:hover { transform: translateY(-10px); }
 .excavator-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
-.excavator-card h3 { font-size: 1.8em; color: #081a55; margin: 10px 0; }
-.excavator-card p { font-size: 1.1em; font-weight: 500; margin-bottom: 15px; }
-
-/* Rent Now Button */
-.rent-now-btn { 
-    background-color: #ff6600; color: white; padding: 12px 20px; 
-    text-decoration: none; border-radius: 8px; font-weight: bold; 
-    text-align: center; display: inline-block; transition: 0.3s;
-}
-.rent-now-btn:hover { background-color: #e65c00; transform: scale(1.05); }
 
 /* 7. Contact Section */
 .contact-section { background-color: #1a1a1a; color: white; padding: 60px 20px; border-radius: 15px; margin: 40px auto; max-width: 800px; text-align: center; }
 
-/* 8. Mobile Responsiveness */
+/* 8. Mobile Responsiveness (Fix) */
 @media (max-width: 768px) {
     .welcome-section h1 { font-size: 2em; }
-    .services-grid { grid-template-columns: 1fr; }
+    .features-section { flex-direction: column; }
+    .feature-box { width: 90% !important; margin: 0 auto; }
+    .breadcrumb-nav { flex-direction: column; }
+    .nav-box { width: 90%; text-align: center; margin-bottom: 10px; }
+    .excavator-grid { grid-template-columns: 1fr; } /* ෆෝන් එකට බොක්ස් එක පේළියට එන ලෙස */
+    img { max-width: 100% !important; height: auto !important; }
 }
-.date-picker {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    width: 100%;
-}
-
