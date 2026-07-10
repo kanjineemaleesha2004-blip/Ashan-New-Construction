@@ -574,7 +574,7 @@ img {
 }
 
 .excavator-card, .service-item {
-    background: #000000;
+    background: #f7ce18;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -598,7 +598,7 @@ img {
 }
 
 .excavator-card {
-    background: #cdfc0f;
+    background: #fcfc0f;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
