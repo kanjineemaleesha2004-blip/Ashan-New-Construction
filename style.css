@@ -584,7 +584,34 @@ img {
 .excavator-card img {
     width: 100% !important;
     height: 250px !important;
-    object-fit: cover !important; /* මෙයයි පින්තූරේ හරියටම පෙන්නන රහස */
+    object-fit: cover !important; 
     border-radius: 10px;
+    display: block !important;
+}
+.excavator-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    max-width: 1200px !important;
+    margin: 40px auto !important;
+    padding: 20px !important;
+}
+
+.excavator-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.excavator-card img {
+    width: 100% !important;
+    height: 250px !important; 
+    object-fit: cover !important;
+    border-radius: 10px;
+    margin-bottom: 15px;
     display: block !important;
 }
