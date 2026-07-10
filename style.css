@@ -21,32 +21,31 @@ header { background: #b2bcc1; color: #081a55; padding: 20px 0; text-align: cente
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: white; text-align: center; padding: 20px;
 }
-.welcome-section h1 { font-size: 3.5em; margin-bottom: 10px; }
 
-/* 5. Features (Services) Section - ඔබේ අයිකන් බොක්ස් */
-.features-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px 20px; }
-.feature-box { 
-    flex: 1; min-width: 300px; padding: 40px 20px; text-align: center; 
-    color: white; transition: 0.4s; border-radius: 10px;
-}
-.dark-bg { background-color: #2c3e50; }
-.highlight-bg { background-color: #f1c40f; color: black; }
-.feature-box:hover { transform: translateY(-15px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-.feature-box i { font-size: 3em; margin-bottom: 15px; display: block; } /* අයිකන් සඳහා */
+/* 5. Our Services (Icons section) */
+.our-services-section { background-color: #081a55; padding: 60px 20px; color: white; text-align: center; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto; }
+.service-item { background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; }
+.service-icon { width: 80px; height: 80px; background-color: #ff6600; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px auto; font-size: 2em; color: white; }
 
-/* 6. Excavator/Services Section */
+/* 6. Excavator/Services Section (Cards with Button) */
 .excavator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 20px; }
 .excavator-card { 
-    background: rgb(137, 192, 239); 
-    padding: 25px; 
-    border-radius: 20px; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-    transition: 0.3s; 
+    background: rgb(137, 192, 239); padding: 25px; border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; 
+    transition: 0.3s;
 }
-.excavator-card:hover { transform: translateY(-10px); }
 .excavator-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
-.excavator-card h3 { font-size: 1.8em; color: #081a55; margin: 15px 0; }
-.excavator-card p { font-size: 1.1em; font-weight: 500; margin-bottom: 5px; }
+.excavator-card h3 { font-size: 1.8em; color: #081a55; margin: 10px 0; }
+.excavator-card p { font-size: 1.1em; font-weight: 500; margin-bottom: 15px; }
+
+/* Rent Now Button */
+.rent-now-btn { 
+    background-color: #ff6600; color: white; padding: 12px 20px; 
+    text-decoration: none; border-radius: 8px; font-weight: bold; 
+    text-align: center; display: inline-block; transition: 0.3s;
+}
+.rent-now-btn:hover { background-color: #e65c00; transform: scale(1.05); }
 
 /* 7. Contact Section */
 .contact-section { background-color: #1a1a1a; color: white; padding: 60px 20px; border-radius: 15px; margin: 40px auto; max-width: 800px; text-align: center; }
@@ -54,7 +53,13 @@ header { background: #b2bcc1; color: #081a55; padding: 20px 0; text-align: cente
 /* 8. Mobile Responsiveness */
 @media (max-width: 768px) {
     .welcome-section h1 { font-size: 2em; }
-    .features-section { flex-direction: column; }
-    .feature-box { width: 90% !important; margin: 0 auto; }
+    .services-grid { grid-template-columns: 1fr; }
+}
+.date-picker {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    width: 100%;
 }
 
