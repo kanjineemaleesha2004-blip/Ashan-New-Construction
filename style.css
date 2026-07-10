@@ -114,7 +114,7 @@ header {
 
 
 .service-box {
-    background: #d4ff5e;
+    background: hsl(59, 100%, 68%);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -184,7 +184,7 @@ header {
 /* Hover effect: box lifts up and shows a 3D shadow */
 .feature-box:hover {
     transform: translateY(-15px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 30px rgba(222, 225, 50, 0.768);
     z-index: 1;
 }
 
